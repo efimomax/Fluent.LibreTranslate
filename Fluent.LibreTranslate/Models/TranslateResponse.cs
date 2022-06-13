@@ -1,6 +1,7 @@
-﻿namespace Fluent.LibreTranslate.Models;
-
-internal class TranslateResponse
+namespace Fluent.LibreTranslate.Models
 {
-    public string TranslatedText { get; set; }
+    internal class TranslateResponse
+    {
+        public string TranslatedText { get; set; }
+    }
 }

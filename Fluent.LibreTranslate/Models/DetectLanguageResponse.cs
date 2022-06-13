@@ -1,8 +1,11 @@
-﻿namespace Fluent.LibreTranslate.Models;
-
-internal class DetectLanguageResponse
+namespace Fluent.LibreTranslate.Models
 {
-    public double Confidence { get; set; }
 
-    public string Language { get; set; }
+    internal class DetectLanguageResponse
+    {
+        public double Confidence { get; set; }
+
+        public string Language { get; set; }
+    }
+
 }

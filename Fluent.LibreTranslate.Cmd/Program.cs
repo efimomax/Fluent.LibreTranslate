@@ -1,17 +1,24 @@
-﻿namespace Fluent.LibreTranslate.Cmd;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
-internal class Program
+namespace Fluent.LibreTranslate.Cmd
 {
-    private static async Task Main(string[] args)
+
+    internal class Program
     {
-        GlobalLibreTranslateSettings.Server = LibreTranslateServer.Libretranslate_de;
-
-        if (args.Any())
+        private static async Task Main(string[] args)
         {
-            Console.WriteLine(await string.Join(" ", args).TranslateAsync(LanguageCode.Finnish));
-            return;
-        }
+            GlobalLibreTranslateSettings.Server = LibreTranslateServer.Libretranslate_de;
 
-        Console.WriteLine(await "Hello, World!".TranslateAsync(LanguageCode.Finnish));
+            if (args.Any())
+            {
+                Console.WriteLine(await string.Join(" ", args).TranslateAsync(LanguageCode.Finnish));
+                return;
+            }
+
+            Console.WriteLine(await "Hello, World!".TranslateAsync(LanguageCode.Finnish));
+        }
     }
+
 }
